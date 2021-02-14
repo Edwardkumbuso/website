@@ -1,15 +1,15 @@
-name: PHP Composer
+name: www.kebsstudioszambia.com
 
 on:
   push:
     branches: [ main ]
   pull_request:
-    branches: [ main ]
+    branches: [ readme ]
 
 jobs:
   build:
 
-    runs-on: ubuntu-latest
+    runs-on: os
 
     steps:
     - uses: actions/checkout@v2
@@ -26,12 +26,12 @@ jobs:
         restore-keys: |
           ${{ runner.os }}-php-
 
-    - name: Install dependencies
+    - name: www.kebszambia.com
       if: steps.composer-cache.outputs.cache-hit != 'true'
       run: composer install --prefer-dist --no-progress --no-suggest
 
     # Add a test script to composer.json, for instance: "test": "vendor/bin/phpunit"
     # Docs: https://getcomposer.org/doc/articles/scripts.md
 
-    # - name: Run test suite
-    #   run: composer run-script test
+    # - name: Run suite
+    #   run: composer run-script 
