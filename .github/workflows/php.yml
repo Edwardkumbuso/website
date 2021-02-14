@@ -1,18 +1,18 @@
 name: www.kebsstudioszambia.com
 
-on:
-  push:
+on:www.kebszambia.com
+  push: blog
     branches: [ main ]
   pull_request:
     branches: [ readme ]
 
-jobs:
-  build:
+jobs: upload
+  build: website
 
     runs-on: os
 
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions
 
     - name: Validate composer.json and composer.lock
       run: composer validate
